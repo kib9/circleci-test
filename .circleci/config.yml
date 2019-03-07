@@ -4,6 +4,10 @@
 version: 2
 jobs:
   build:
+    branches:
+      # ignore branches: "feature-" prefix
+      ignore:
+        - /feature-.*/
     docker:
       # specify the version
       - image: circleci/golang:1.9
